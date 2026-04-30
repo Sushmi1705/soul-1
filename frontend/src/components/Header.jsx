@@ -29,12 +29,12 @@ const Header = () => {
           data-testid="brand-logo"
           className="flex items-center gap-2 group"
         >
-          <Sparkles className={`w-5 h-5 transition-all duration-500 group-hover:rotate-180 ${scrolled ? "text-[#B38B36]" : "text-[#E5C06A]"}`} />
+          <Sparkles className="w-5 h-5 text-[#B38B36] transition-transform duration-500 group-hover:rotate-180" />
           <div className="leading-tight">
-            <div className={`font-serif text-2xl tracking-tight transition-colors duration-500 ${scrolled ? "text-[#1A1A1A]" : "text-white"}`}>
+            <div className="font-serif text-2xl tracking-tight text-[#1F1A12]">
               {BRAND.name}
             </div>
-            <div className={`text-[10px] tracking-[0.3em] uppercase transition-colors duration-500 ${scrolled ? "text-[#725D46]" : "text-[#E5C06A]/90"}`}>
+            <div className="text-[10px] tracking-[0.3em] uppercase text-[#8A5A1B]">
               by {BRAND.author}
             </div>
           </div>
@@ -46,7 +46,7 @@ const Header = () => {
               key={l.href}
               href={l.href}
               data-testid={`nav-${l.label.toLowerCase()}`}
-              className={`text-sm tracking-wide transition-colors duration-500 relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-[#E5C06A] hover:after:w-full after:transition-all ${scrolled ? "text-[#2A2A2A] hover:text-[#B38B36]" : "text-white/80 hover:text-[#E5C06A]"}`}
+              className="text-sm tracking-wide text-[#2A2A2A] hover:text-[#B38B36] transition-colors duration-300 relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-[#B38B36] hover:after:w-full after:transition-all after:duration-500"
             >
               {l.label}
             </a>
@@ -57,7 +57,7 @@ const Header = () => {
           <button
             data-testid="open-cart-button"
             onClick={() => setIsOpen(true)}
-            className={`relative flex items-center gap-2 px-5 py-2.5 rounded-full border transition-all duration-300 group ${scrolled ? "border-[#1A1A1A]/15 text-[#1A1A1A] hover:border-[#B38B36] hover:text-[#B38B36]" : "border-white/25 text-white hover:border-[#E5C06A] hover:text-[#E5C06A]"}`}
+            className="relative flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#1A1A1A]/15 text-[#1A1A1A] hover:border-[#B38B36] hover:text-[#B38B36] transition-all duration-300 group"
           >
             <ShoppingBag className="w-4 h-4" />
             <span className="hidden sm:inline text-xs tracking-[0.2em] uppercase">
@@ -74,7 +74,7 @@ const Header = () => {
           </button>
           <button
             data-testid="mobile-menu-toggle"
-            className={`lg:hidden p-2 ${scrolled ? "text-[#1A1A1A]" : "text-white"}`}
+            className="lg:hidden p-2 text-[#1A1A1A]"
             onClick={() => setMobileOpen((v) => !v)}
           >
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
