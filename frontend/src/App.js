@@ -1,4 +1,5 @@
 import "@/App.css";
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "@/context/CartContext";
 import { Toaster } from "@/components/ui/sonner";
@@ -13,22 +14,38 @@ import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
 import MobileBottomNav from "@/components/MobileBottomNav";
 
-const Home = () => (
-  <div className="bg-[#FAFAFA] text-[#1A1A1A] min-h-screen font-[Outfit,sans-serif] antialiased pb-24 lg:pb-0">
-    <Header />
-    <main>
-      <Hero />
-      <About />
-      <Services />
-      <Courses />
-      <Testimonials />
-      <Journal />
-    </main>
-    <Footer />
-    <CartDrawer />
-    <MobileBottomNav />
-  </div>
-);
+const Home = () => {
+  useEffect(() => {
+    const removeBadge = () => {
+      document.querySelectorAll("#emergent-badge").forEach((el) => el.remove());
+    };
+    removeBadge();
+    const interval = setInterval(removeBadge, 500);
+    const observer = new MutationObserver(removeBadge);
+    observer.observe(document.body, { childList: true, subtree: true });
+    return () => {
+      clearInterval(interval);
+      observer.disconnect();
+    };
+  }, []);
+
+  return (
+    <div className="bg-[#FAFAFA] text-[#1A1A1A] min-h-screen font-[Outfit,sans-serif] antialiased pb-24 lg:pb-0">
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <Courses />
+        <Testimonials />
+        <Journal />
+      </main>
+      <Footer />
+      <CartDrawer />
+      <MobileBottomNav />
+    </div>
+  );
+};
 
 function App() {
   return (

@@ -1,5 +1,15 @@
 import { useState } from "react";
-import { Home, Calendar, ShoppingBag, Menu, GraduationCap, X, Sparkles, Phone, BookOpen, User } from "lucide-react";
+import {
+  Home,
+  Calendar,
+  Menu,
+  GraduationCap,
+  Sparkles,
+  Phone,
+  Mail,
+  Clock,
+  ShoppingBag,
+} from "lucide-react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { useCart } from "@/context/CartContext";
 import { NAV_LINKS, BRAND } from "@/data/content";
@@ -16,22 +26,21 @@ const MobileBottomNav = () => {
 
   return (
     <>
-      {/* Floating dock */}
       <nav
         data-testid="mobile-bottom-nav"
-        className="lg:hidden fixed bottom-0 inset-x-0 z-40 pb-[env(safe-area-inset-bottom)]"
+        className="lg:hidden fixed bottom-0 inset-x-0 z-50 pb-[env(safe-area-inset-bottom)] pointer-events-none"
       >
-        {/* Soft glow behind */}
-        <div className="absolute -top-8 inset-x-4 h-8 bg-gradient-to-t from-[#FBF6EC]/95 to-transparent pointer-events-none" />
-
-        <div className="mx-3 mb-3 rounded-2xl bg-white/90 backdrop-blur-xl border border-[#E5E1D8] shadow-[0_10px_30px_-10px_rgba(138,90,27,0.25)]">
-          <div className="grid grid-cols-5 items-end h-[68px] relative">
+        <div className="mx-3 mb-3 pointer-events-auto rounded-[22px] bg-white/95 backdrop-blur-xl border border-[#E5E1D8] shadow-[0_12px_32px_-8px_rgba(138,90,27,0.28)]">
+          <div className="grid grid-cols-5 h-[64px] relative">
+            {/* 1. Home */}
             <NavBtn
               testid="mobile-nav-home"
               icon={<Home className="w-[18px] h-[18px]" strokeWidth={1.7} />}
               label="Home"
               onClick={() => scrollTo("home")}
             />
+
+            {/* 2. Services */}
             <NavBtn
               testid="mobile-nav-services"
               icon={<Sparkles className="w-[18px] h-[18px]" strokeWidth={1.7} />}
@@ -39,23 +48,24 @@ const MobileBottomNav = () => {
               onClick={() => scrollTo("services")}
             />
 
-            {/* Center FAB - Book */}
-            <div className="flex justify-center -mt-7">
-              <button
-                data-testid="mobile-nav-book"
-                onClick={() => scrollTo("services")}
-                className="relative group"
-              >
-                <span className="absolute inset-0 rounded-full bg-[#B38B36]/30 blur-md group-active:scale-95 transition-transform" />
-                <span className="relative flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-[#D4A646] to-[#9A752B] text-white shadow-[0_8px_20px_-4px_rgba(179,139,54,0.6)] border-[3px] border-white">
-                  <Calendar className="w-5 h-5" strokeWidth={2} />
+            {/* 3. CENTER FAB - Book */}
+            <button
+              data-testid="mobile-nav-book"
+              onClick={() => scrollTo("services")}
+              className="relative flex flex-col items-center justify-center group"
+            >
+              <span className="absolute -top-7 flex items-center justify-center">
+                <span className="absolute inset-0 w-14 h-14 rounded-full bg-[#B38B36]/30 blur-md group-active:scale-90 transition-transform" />
+                <span className="relative flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-[#D4A646] to-[#9A752B] text-white shadow-[0_8px_18px_-3px_rgba(179,139,54,0.6)] border-[3px] border-white">
+                  <Calendar className="w-[22px] h-[22px]" strokeWidth={2} />
                 </span>
-                <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 text-[9px] tracking-[0.2em] uppercase text-[#8A5A1B] font-medium whitespace-nowrap">
-                  Book
-                </span>
-              </button>
-            </div>
+              </span>
+              <span className="mt-7 text-[9px] tracking-[0.18em] uppercase text-[#8A5A1B] font-semibold">
+                Book
+              </span>
+            </button>
 
+            {/* 4. Courses */}
             <NavBtn
               testid="mobile-nav-courses"
               icon={<GraduationCap className="w-[18px] h-[18px]" strokeWidth={1.7} />}
@@ -63,37 +73,14 @@ const MobileBottomNav = () => {
               onClick={() => scrollTo("courses")}
             />
 
-            <button
-              data-testid="mobile-nav-cart"
-              onClick={() => setIsOpen(true)}
-              className="flex flex-col items-center justify-center gap-1 text-[#1F1A12] active:scale-95 transition-transform relative"
-            >
-              <div className="relative">
-                <ShoppingBag className="w-[18px] h-[18px]" strokeWidth={1.7} />
-                {count > 0 && (
-                  <span
-                    data-testid="mobile-cart-badge"
-                    className="absolute -top-1.5 -right-2 bg-[#B38B36] text-white text-[9px] font-medium min-w-[16px] h-[16px] rounded-full flex items-center justify-center px-1"
-                  >
-                    {count}
-                  </span>
-                )}
-              </div>
-              <span className="text-[9px] tracking-[0.15em] uppercase text-[#5A4A30]">
-                Cart
-              </span>
-            </button>
+            {/* 5. Menu */}
+            <NavBtn
+              testid="mobile-nav-menu"
+              icon={<Menu className="w-[18px] h-[18px]" strokeWidth={1.7} />}
+              label="Menu"
+              onClick={() => setMenuOpen(true)}
+            />
           </div>
-
-          {/* Hamburger row */}
-          <button
-            data-testid="mobile-nav-menu"
-            onClick={() => setMenuOpen(true)}
-            className="absolute -top-4 right-3 w-9 h-9 rounded-full bg-white border border-[#E5E1D8] shadow-md flex items-center justify-center text-[#1F1A12] active:scale-95"
-            aria-label="Open menu"
-          >
-            <Menu className="w-4 h-4" />
-          </button>
         </div>
       </nav>
 
@@ -104,7 +91,7 @@ const MobileBottomNav = () => {
           data-testid="mobile-menu-sheet"
           className="w-full sm:max-w-sm bg-[#FBF6EC] border-l border-[#E5E1D8] p-0 flex flex-col"
         >
-          <SheetHeader className="p-6 border-b border-[#E5E1D8]">
+          <SheetHeader className="p-6 border-b border-[#E5E1D8] text-left">
             <SheetTitle className="font-serif text-2xl text-[#1F1A12] flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-[#B38B36]" />
               {BRAND.name}
@@ -157,11 +144,11 @@ const MobileBottomNav = () => {
                 +91 98XXX XXXXX
               </div>
               <div className="flex items-center gap-3">
-                <BookOpen className="w-4 h-4 text-[#B38B36]" />
+                <Mail className="w-4 h-4 text-[#B38B36]" />
                 hello@soulkarma.in
               </div>
               <div className="flex items-center gap-3">
-                <User className="w-4 h-4 text-[#B38B36]" />
+                <Clock className="w-4 h-4 text-[#B38B36]" />
                 Mon – Sat · 9 AM – 7 PM
               </div>
             </div>

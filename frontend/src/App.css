@@ -82,3 +82,8 @@ section[id] {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Hide platform branding badge */
+#emergent-badge {
+  display: none !important;
+}

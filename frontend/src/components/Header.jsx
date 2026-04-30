@@ -69,14 +69,23 @@ const Header = () => {
           )}
         </button>
 
-        {/* Mobile: little book quick CTA */}
-        <a
-          href="#services"
-          data-testid="header-mobile-book"
-          className="lg:hidden inline-flex items-center gap-1.5 bg-[#1F1A12] text-white text-[10px] tracking-[0.2em] uppercase px-4 py-2 rounded-full"
+        {/* Mobile: Cart icon top-right */}
+        <button
+          data-testid="header-mobile-cart"
+          onClick={() => setIsOpen(true)}
+          className="lg:hidden relative w-10 h-10 rounded-full bg-white/80 backdrop-blur border border-[#E5E1D8] flex items-center justify-center text-[#1F1A12] active:scale-95"
+          aria-label="Open cart"
         >
-          Book
-        </a>
+          <ShoppingBag className="w-[18px] h-[18px]" strokeWidth={1.7} />
+          {count > 0 && (
+            <span
+              data-testid="header-mobile-cart-badge"
+              className="absolute -top-1 -right-1 bg-[#B38B36] text-white text-[10px] font-medium min-w-[18px] h-[18px] rounded-full flex items-center justify-center px-1"
+            >
+              {count}
+            </span>
+          )}
+        </button>
       </div>
     </header>
   );
