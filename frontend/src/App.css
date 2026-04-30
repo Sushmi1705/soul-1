@@ -1,34 +1,79 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Global typography & aesthetic overrides for Soul Karma */
+body {
+  font-family: "Outfit", sans-serif;
+  background: #fafafa;
+  color: #1a1a1a;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.font-serif {
+  font-family: "Cormorant Garamond", serif !important;
+  font-weight: 500;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+::selection {
+  background: #b38b36;
+  color: #fff;
 }
 
-.App-link {
-    color: #61dafb;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f3f1ec;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4cfc2;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b38b36;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* React-day-picker tint */
+.rdp {
+  --rdp-accent-color: #b38b36;
+  --rdp-background-color: #f3f1ec;
+  --rdp-cell-size: 38px;
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+}
+.rdp-caption_label {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+}
+.rdp-head_cell {
+  color: #725d46;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.rdp-day_selected,
+.rdp-day_selected:hover,
+.rdp-day_selected:focus {
+  background: #1a1a1a !important;
+  color: #fff !important;
+  border-radius: 999px;
+}
+.rdp-day:hover:not(.rdp-day_disabled):not(.rdp-day_selected) {
+  background: #f3f1ec;
+  color: #b38b36;
+  border-radius: 999px;
+}
+.rdp-button:focus-visible:not([disabled]) {
+  border-color: #b38b36;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
