@@ -1,0 +1,178 @@
+{
+  "project_name": "Soul Karma by Gitika Sharma - Modern Redesign",
+  "theme": "light",
+  "archetype": "Archetype 1 (Organic & Earthy) with Luxury Accents",
+  "design_philosophy": "Elegant, mystical, and grounded. The aesthetic blends cosmic/astrology themes with modern luxury wellness. Uses bento grids for structured content, generous negative space, and organic textures.",
+  "typography": {
+    "heading_font": "Cormorant Garamond",
+    "heading_fallback": "serif",
+    "body_font": "Outfit",
+    "body_fallback": "sans-serif",
+    "scale": {
+      "h1": "text-5xl sm:text-6xl tracking-tight leading-none",
+      "h2": "text-3xl sm:text-4xl tracking-tight",
+      "h3": "text-xl sm:text-2xl",
+      "body": "text-base leading-relaxed tracking-wide",
+      "label": "text-xs tracking-[0.2em] uppercase"
+    }
+  },
+  "colors": {
+    "background_main": "#FAFAFA",
+    "background_secondary": "#F3F1EC",
+    "surface_glass": "bg-white/70 backdrop-blur-xl",
+    "text_main": "#1A1A1A",
+    "text_muted": "#5C5C5C",
+    "primary_accent": "#B38B36",
+    "primary_accent_hover": "#9A752B",
+    "secondary_accent": "#725D46",
+    "border_color": "#E5E1D8",
+    "surface_dark": "#2A2A2A"
+  },
+  "layout_and_spacing": {
+    "container": "max-w-7xl mx-auto px-6 lg:px-12",
+    "section_padding": "py-20 md:py-32",
+    "grid_style": "Bento Grid for Services (gap-6 or gap-8), Cards have p-8 padding",
+    "border_radius": "rounded-2xl"
+  },
+  "interactions_and_motion": {
+    "hover_states": "Subtle -translate-y-1, shadow-lg, and image scale transform (scale-105) inside overflow-hidden wrappers.",
+    "buttons": "Solid primary background with white text, tracking-wider. Or outline buttons with thin gold border.",
+    "glassmorphism": "Used for sticky header and booking/checkout modals. Must have 1px subtle inner border (border-white/40)."
+  },
+  "components_needed": [
+    {
+      "name": "Header",
+      "type": "navigation",
+      "details": "Sticky top, Glassmorphism (bg-white/70 backdrop-blur-xl border-b border-border_color/50). Logo left, links center, Cart button right."
+    },
+    {
+      "name": "HeroSection",
+      "type": "layout",
+      "details": "Full height (min-h-[80vh]). Abstract sand background image behind with dark overlay (bg-black/30) to make white serif text pop. Headline: 'Where the universe whispers its secrets'."
+    },
+    {
+      "name": "AboutSection",
+      "type": "layout",
+      "details": "Asymmetric split layout. Large image on left (about-img-1), generous spacing. Elegant typography on right."
+    },
+    {
+      "name": "ServicesSection",
+      "type": "grid",
+      "details": "3-column grid. Each card has an image, title, and 'Book Appointment' button. Clicking opens BookingModal."
+    },
+    {
+      "name": "BookingModal",
+      "type": "modal",
+      "details": "Shadcn Dialog. Shows selected service. Uses react-day-picker for calendar. Shows list of available time slots upon date selection. Confirm button triggers sonner toast 'Appointment Confirmed'."
+    },
+    {
+      "name": "CoursesSection",
+      "type": "grid",
+      "details": "E-commerce styled grid for courses. Price displayed clearly. 'Add to Cart' button."
+    },
+    {
+      "name": "CartDrawer",
+      "type": "drawer/sheet",
+      "details": "Right-side Sheet component. Order summary, total amount, 'Checkout' button. Checkout triggers sonner toast 'Order Placed'."
+    },
+    {
+      "name": "TestimonialsCarousel",
+      "type": "carousel",
+      "details": "Subtle cards with soft quotes, using Cormorant Garamond italic for the quote text."
+    },
+    {
+      "name": "Footer",
+      "type": "layout",
+      "details": "Dark background (surface_dark), gold text accents. Large 'Soul Karma' brand text. Newsletter input."
+    }
+  ],
+  "testing": {
+    "instructions": "All interactive elements (buttons, inputs, modal triggers) MUST include a data-testid attribute formatted as kebab-case, e.g., data-testid='book-service-kundali', data-testid='add-to-cart-bhrigu', data-testid='cart-checkout-button'."
+  },
+  "media": {
+    "images": [
+      {
+        "category": "hero_background",
+        "url": "https://images.unsplash.com/photo-1677232352324-4b78c5936a1b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwzfHxteXN0aWNhbCUyMGVsZWdhbnQlMjBiYWNrZ3JvdW5kJTIwc2FuZHxlbnwwfHx8fDE3Nzc1MjM0MzJ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract wave sand pattern for hero background."
+      },
+      {
+        "category": "texture_accent",
+        "url": "https://images.pexels.com/photos/21031387/pexels-photo-21031387.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Intricate golden wave pattern for course section backgrounds."
+      },
+      {
+        "category": "about_image",
+        "url": "https://gitikasharma.in/wp-content/uploads/2024/02/about-img-1.png",
+        "description": "Gitika Sharma portrait/about image."
+      },
+      {
+        "category": "service",
+        "service_name": "Kundali Analysis",
+        "url": "https://gitikasharma.in/wp-content/uploads/2024/02/Kundali-analysis-1.png"
+      },
+      {
+        "category": "service",
+        "service_name": "Kundali Making",
+        "url": "https://gitikasharma.in/wp-content/uploads/2024/02/Kundali-Making.png"
+      },
+      {
+        "category": "service",
+        "service_name": "Match Making",
+        "url": "https://gitikasharma.in/wp-content/uploads/2024/02/Match-Making.png"
+      },
+      {
+        "category": "service",
+        "service_name": "Numerology Analysis",
+        "url": "https://gitikasharma.in/wp-content/uploads/2024/02/Numerology.png"
+      },
+      {
+        "category": "service",
+        "service_name": "Vastu Consultation",
+        "url": "https://gitikasharma.in/wp-content/uploads/2024/02/Vastu-Consultation.png"
+      },
+      {
+        "category": "service",
+        "service_name": "Soul Purpose",
+        "url": "https://gitikasharma.in/wp-content/uploads/2024/02/Soul-Purpose.png"
+      },
+      {
+        "category": "course",
+        "course_name": "Akashic Records",
+        "price": "15999",
+        "url": "https://gitikasharma.in/wp-content/uploads/2024/03/7-5.png"
+      },
+      {
+        "category": "course",
+        "course_name": "Bhrigu Nandi Nadi",
+        "price": "27999",
+        "url": "https://gitikasharma.in/wp-content/uploads/2024/03/2-7.png"
+      },
+      {
+        "category": "course",
+        "course_name": "Lal Kitab Astrology",
+        "price": "27999",
+        "url": "https://gitikasharma.in/wp-content/uploads/2024/03/5-5.png"
+      },
+      {
+        "category": "course",
+        "course_name": "Numerology",
+        "price": "9240",
+        "url": "https://gitikasharma.in/wp-content/uploads/2024/03/3-5.png"
+      },
+      {
+        "category": "course",
+        "course_name": "Palmistry",
+        "price": "9240",
+        "url": "https://gitikasharma.in/wp-content/uploads/2024/03/4-5.png"
+      },
+      {
+        "category": "course",
+        "course_name": "Vastu Shastra Course",
+        "price": "27999",
+        "url": "https://gitikasharma.in/wp-content/uploads/2024/03/6-7.png"
+      }
+    ]
+  },
+  "development_instructions": "Ensure you are using JavaScript (not TypeScript) as requested in the critical rules. Use Lucide-react for standard icons, but feel free to install phosphor-icons/react if more elegant duotone styling is needed. Do not use generic fonts like Inter. Use 'Cormorant Garamond' for headings and 'Outfit' for body. Implement a cart state in React (Context or simple state) to allow adding to cart and displaying the count in the header. Mock the checkout and booking flows using sonner toasts."
+}
