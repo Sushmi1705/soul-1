@@ -36,6 +36,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Prevent fixed header overlap on anchor scroll */
+section[id] {
+  scroll-margin-top: 96px;
+}
+
 /* React-day-picker tint */
 .rdp {
   --rdp-accent-color: #b38b36;
