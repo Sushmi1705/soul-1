@@ -11,9 +11,10 @@ import Testimonials from "@/components/Testimonials";
 import Journal from "@/components/Journal";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
+import MobileBottomNav from "@/components/MobileBottomNav";
 
 const Home = () => (
-  <div className="bg-[#FAFAFA] text-[#1A1A1A] min-h-screen font-[Outfit,sans-serif] antialiased">
+  <div className="bg-[#FAFAFA] text-[#1A1A1A] min-h-screen font-[Outfit,sans-serif] antialiased pb-24 lg:pb-0">
     <Header />
     <main>
       <Hero />
@@ -25,6 +26,7 @@ const Home = () => (
     </main>
     <Footer />
     <CartDrawer />
+    <MobileBottomNav />
   </div>
 );
 

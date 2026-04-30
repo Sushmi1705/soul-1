@@ -45,7 +45,7 @@ const BookingModal = ({ service, open, onClose }) => {
     <Dialog open={open} onOpenChange={(v) => !v && onClose()}>
       <DialogContent
         data-testid="booking-modal"
-        className="max-w-5xl p-0 bg-[#FAFAFA] border border-[#E5E1D8] overflow-hidden rounded-2xl"
+        className="max-w-5xl p-0 bg-[#FAFAFA] border border-[#E5E1D8] overflow-hidden rounded-none sm:rounded-2xl w-screen h-[100dvh] sm:h-auto sm:w-full max-h-[100dvh] sm:max-h-[90vh]"
       >
         <DialogTitle className="sr-only">Book {service.title}</DialogTitle>
         <DialogDescription className="sr-only">
@@ -82,9 +82,9 @@ const BookingModal = ({ service, open, onClose }) => {
             </button>
           </div>
         ) : (
-          <div className="grid md:grid-cols-[1fr_1.1fr] max-h-[85vh] overflow-y-auto">
+          <div className="grid md:grid-cols-[1fr_1.1fr] h-full md:max-h-[85vh] overflow-y-auto">
             {/* LEFT - Service summary */}
-            <aside className="bg-[#1A1A1A] text-white p-8 md:p-10 flex flex-col justify-between">
+            <aside className="bg-[#1A1A1A] text-white p-6 md:p-10 flex flex-col justify-between md:sticky md:top-0">
               <div>
                 <div className="text-[10px] tracking-[0.4em] uppercase text-[#E5C06A] mb-4">
                   Booking
@@ -129,7 +129,7 @@ const BookingModal = ({ service, open, onClose }) => {
             </aside>
 
             {/* RIGHT - Form */}
-            <div className="p-8 md:p-10 space-y-7">
+            <div className="p-6 md:p-10 space-y-7 pb-32 md:pb-10">
               {/* Step 1 */}
               <div>
                 <div className="flex items-center gap-3 mb-4">
