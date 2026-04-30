@@ -26,19 +26,19 @@ const About = () => {
           <div className="lg:col-span-7 lg:pl-10">
             <div className="flex items-center gap-3 mb-6">
               <span className="h-px w-10 bg-[#B38B36]" />
-              <span className="text-[11px] tracking-[0.4em] uppercase text-[#725D46]">
+              <span className="text-[11px] tracking-[0.4em] uppercase text-[#B38B36]">
                 About Us
               </span>
             </div>
             <h2
               data-testid="about-heading"
-              className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-[#1A1A1A] mb-8"
+              className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-white mb-8"
             >
               Welcome to{" "}
               <em className="italic text-[#B38B36] font-light">Soul Karma.</em>
             </h2>
 
-            <div className="space-y-5 text-[#3A3A3A] leading-relaxed text-base max-w-xl">
+            <div className="space-y-5 text-[#D1D1D1] leading-relaxed text-base max-w-xl">
               <p>
                 I am Gitika Sharma — a seasoned astrologer and IT professional
                 with 15 years of enriching experience, dedicated to unraveling
@@ -66,7 +66,7 @@ const About = () => {
               ].map((item) => (
                 <div
                   key={item}
-                  className="text-sm tracking-wide text-[#2A2A2A] border-l-2 border-[#B38B36] pl-3"
+                  className="text-sm tracking-wide text-gray-300 border-l-2 border-[#B38B36] pl-3"
                 >
                   {item}
                 </div>

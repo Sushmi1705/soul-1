@@ -5,6 +5,7 @@ import { CartProvider } from "@/context/CartContext";
 import { Toaster } from "@/components/ui/sonner";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import HeroAstrology from "@/components/HeroAstrology";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Courses from "@/components/Courses";
@@ -30,10 +31,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-[#FAFAFA] text-[#1A1A1A] min-h-screen font-[Outfit,sans-serif] antialiased pb-24 lg:pb-0">
+    <div className="bg-[#05050A] text-white min-h-screen font-[Outfit,sans-serif] antialiased pb-24 lg:pb-0">
       <Header />
       <main>
-        <Hero />
+        <HeroAstrology />
         <About />
         <Services />
         <Courses />
