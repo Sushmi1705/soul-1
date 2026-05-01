@@ -24,8 +24,12 @@ const Courses = () => {
     <section
       id="courses"
       data-testid="courses-section"
-      className="relative py-24 md:py-36 bg-[#1A1A1A] text-white overflow-hidden"
+      className="relative py-24 md:py-36 bg-[#0A0A14] text-white overflow-hidden"
     >
+      {/* Course Nebula Accent */}
+      <div className="absolute top-1/2 right-0 w-[40%] h-[80%] rounded-full opacity-[0.03] blur-[120px] pointer-events-none"
+        style={{ background: 'radial-gradient(circle, #B38B36 0%, transparent 70%)' }}
+      />
       {/* Decorative texture */}
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"

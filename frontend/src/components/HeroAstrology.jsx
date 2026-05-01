@@ -11,104 +11,97 @@ const HeroAstrology = () => {
   }, []);
 
   return (
-    <section
-      id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#05050A]"
-    >
-      {/* Video Background Overlay */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#05050A]/80 via-transparent to-[#05050A] z-10" />
-        <div className="absolute inset-0 bg-black/40 z-10" />
-        <video
-          ref={videoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover scale-105"
-        >
-          {/* Placeholder high-quality astrology video */}
-          <source 
-            src="https://cdn.pixabay.com/vimeo/452333230/stars-48358.mp4?width=1280&hash=85045a5704b2b1a8f9c6d3d9d6e8d1a3c0e5a8d1" 
-            type="video/mp4" 
-          />
-        </video>
-      </div>
+    <>
+      <section
+        id="home"
+        className="relative min-h-[110vh] flex items-center overflow-hidden bg-[#FDFBF7]"
+      >
+        {/* Light Refraction & Prism Effects */}
+        <div className="absolute inset-0 z-10 pointer-events-none">
+          <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[120%] bg-gradient-to-l from-[#B38B36]/10 to-transparent blur-[120px] rounded-full animate-pulse" />
+          <div className="absolute bottom-[-20%] left-[-10%] w-[50%] h-[100%] bg-gradient-to-tr from-[#B38B36]/5 to-transparent blur-[100px] rounded-full" />
+        </div>
 
-      {/* Twinkling Stars Layer */}
-      <div className="absolute inset-0 z-10 pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute bg-white rounded-full animate-pulse"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              width: `${Math.random() * 3}px`,
-              height: `${Math.random() * 3}px`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${2 + Math.random() * 3}s`,
-              opacity: 0.3 + Math.random() * 0.7,
-            }}
-          />
-        ))}
-      </div>
+        {/* Video Background (Subtle & Ethereal) */}
+        <div className="absolute inset-0 z-0 opacity-30">
+          <iframe
+            className="absolute top-1/2 left-1/2 w-[110vw] h-[62vw] min-h-[110vh] min-w-[195vh] -translate-x-1/2 -translate-y-1/2 scale-110 grayscale brightness-150"
+            src="https://www.youtube.com/embed/El12V5eXVsA?autoplay=1&mute=1&loop=1&playlist=El12V5eXVsA&controls=0&showinfo=0&autohide=1&modestbranding=1&rel=0&hd=1"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+          ></iframe>
+        </div>
 
-      {/* Floating Celestial Elements */}
-      <div className="absolute top-20 left-[10%] z-10 animate-bounce-slow opacity-20">
-        <Moon className="w-12 h-12 text-[#B38B36]" />
-      </div>
-      <div className="absolute bottom-40 right-[15%] z-10 animate-pulse opacity-30">
-        <Star className="w-8 h-8 text-[#B38B36]" />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 text-center">
-        <div className="inline-flex items-center gap-3 mb-6 px-4 py-2 rounded-full border border-[#B38B36]/30 bg-[#B38B36]/10 backdrop-blur-sm">
-          <Sparkles className="w-4 h-4 text-[#B38B36]" />
-          <span className="text-[10px] tracking-[0.3em] uppercase text-[#B38B36] font-medium">
-            Cosmic Wisdom · Vedic Insight · Soul Purpose
+        {/* Massive Decorative Typography (Background Layer) */}
+        <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden select-none pointer-events-none">
+          <span className="font-serif text-[40vw] text-black/[0.02] leading-none tracking-tighter uppercase translate-y-20">
+            Oracle
           </span>
         </div>
 
-        <h1 className="font-serif text-[#FAFAFA] text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tighter mb-8 drop-shadow-2xl">
-          Written in the <br />
-          <span className="italic font-light text-[#B38B36] bg-clip-text text-transparent bg-gradient-to-r from-[#B38B36] via-[#D4AF37] to-[#B38B36]">
-            Stars.
-          </span>
-        </h1>
+        {/* Main Content (Asymmetric) */}
+        <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-12 w-full grid lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7 text-left">
+            <div className="flex items-center gap-4 mb-8 animate-reveal opacity-0" style={{ animationDelay: '0.2s' }}>
+              <span className="h-px w-12 bg-[#B38B36]" />
+              <span className="text-[10px] tracking-[0.6em] uppercase text-[#B38B36] font-black">Celestial Wisdom</span>
+            </div>
 
-        <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12 font-light tracking-wide">
-          Unlock the celestial blueprint of your life. Soul Karma bridges the gap between 
-          the cosmic dance and your earthly journey through Gitika Sharma's expert guidance.
-        </p>
+            <h1 className="font-serif text-[#1A1A1A] text-7xl md:text-9xl lg:text-[10rem] leading-[0.85] tracking-tighter mb-12 animate-reveal opacity-0" style={{ animationDelay: '0.4s' }}>
+              Divine <br />
+              <span className="italic font-light text-[#B38B36] ml-[10%]">Guidance.</span>
+            </h1>
 
-        <div className="flex flex-wrap items-center justify-center gap-6">
-          <a
-            href="#services"
-            className="group relative inline-flex items-center gap-3 bg-[#B38B36] hover:bg-[#9A752B] text-white px-10 py-5 rounded-full tracking-[0.2em] uppercase text-xs font-semibold transition-all duration-500 overflow-hidden"
-          >
-            <span className="relative z-10">Begin Your Journey</span>
-            <ArrowRight className="relative z-10 w-4 h-4 transition-transform duration-500 group-hover:translate-x-2" />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-          </a>
-          
-          <a
-            href="#courses"
-            className="group inline-flex items-center gap-3 text-white/90 border border-white/20 hover:border-[#B38B36] hover:text-[#B38B36] backdrop-blur-md px-10 py-5 rounded-full tracking-[0.2em] uppercase text-xs font-semibold transition-all duration-300"
-          >
-            Learn the Art
-          </a>
+            <div className="max-w-md ml-[5%] space-y-8 animate-reveal opacity-0" style={{ animationDelay: '0.6s' }}>
+              <p className="text-lg text-gray-500 leading-relaxed font-light">
+                We decode the cosmic blueprint of your soul. A high-concept journey 
+                through ancient Vedic science and modern spiritual alchemy.
+              </p>
+              <div className="flex items-center gap-8">
+                <button className="px-12 py-5 bg-[#1A1A1A] text-white text-[10px] tracking-[0.4em] uppercase font-bold hover:bg-[#B38B36] transition-all duration-700 shadow-2xl">
+                  Explore The Oracle
+                </button>
+                <div className="flex items-center gap-3 group cursor-pointer">
+                  <div className="w-12 h-12 rounded-full border border-black/5 flex items-center justify-center group-hover:border-[#B38B36] transition-all">
+                    <div className="w-2 h-2 rounded-full bg-[#B38B36] animate-pulse" />
+                  </div>
+                  <span className="text-[9px] tracking-[0.3em] uppercase font-bold text-gray-400 group-hover:text-[#1A1A1A] transition-colors">Play Intro</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-5 relative hidden lg:block animate-reveal opacity-0" style={{ animationDelay: '0.8s' }}>
+            <div className="relative w-[120%] aspect-square translate-x-10 animate-float">
+               <div className="absolute inset-0 bg-[#B38B36]/5 blur-[100px] rounded-full" />
+               <svg viewBox="0 0 1000 1000" className="w-full h-full text-[#B38B36] fill-current opacity-20 animate-[spinSlow_120s_linear_infinite]">
+                  <circle cx="500" cy="500" r="480" stroke="currentColor" strokeWidth="0.5" fill="none" />
+                  <circle cx="500" cy="500" r="300" stroke="currentColor" strokeWidth="0.5" fill="none" />
+                  {Array.from({ length: 12 }).map((_, i) => (
+                    <line
+                      key={i}
+                      x1="500" y1="500"
+                      x2={500 + Math.cos((i * Math.PI * 2) / 12) * 480}
+                      y2={500 + Math.sin((i * Math.PI * 2) / 12) * 480}
+                      stroke="currentColor" strokeWidth="0.5"
+                    />
+                  ))}
+               </svg>
+               <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-64 h-64 rounded-full bg-white shadow-[-20px_20px_60px_rgba(0,0,0,0.05)] border border-black/[0.02] flex items-center justify-center p-12">
+                     <img 
+                      src="https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5?auto=format&fit=crop&q=80&w=400" 
+                      alt="Oracle" 
+                      className="w-full h-full object-cover rounded-full grayscale opacity-80"
+                     />
+                  </div>
+               </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 animate-bounce opacity-40">
-          <div className="w-px h-12 bg-gradient-to-b from-[#B38B36] to-transparent" />
-          <span className="text-[9px] uppercase tracking-[0.3em] text-[#B38B36]">Explore</span>
-        </div>
-      </div>
-
-      <style jsx>{`
+      <style>{`
         @keyframes bounce-slow {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-20px); }
@@ -117,7 +110,7 @@ const HeroAstrology = () => {
           animation: bounce-slow 6s ease-in-out infinite;
         }
       `}</style>
-    </section>
+    </>
   );
 };
 

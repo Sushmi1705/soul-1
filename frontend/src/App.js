@@ -6,7 +6,10 @@ import { Toaster } from "@/components/ui/sonner";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import HeroAstrology from "@/components/HeroAstrology";
+import NebulaBackground from "@/components/NebulaBackground";
 import About from "@/components/About";
+import StatsBar from "@/components/StatsBar";
+import ZodiacSigns from "@/components/ZodiacSigns";
 import Services from "@/components/Services";
 import Courses from "@/components/Courses";
 import Testimonials from "@/components/Testimonials";
@@ -34,8 +37,11 @@ const Home = () => {
     <div className="bg-[#05050A] text-white min-h-screen font-[Outfit,sans-serif] antialiased pb-24 lg:pb-0">
       <Header />
       <main>
+        <NebulaBackground />
         <HeroAstrology />
         <About />
+        <StatsBar />
+        <ZodiacSigns />
         <Services />
         <Courses />
         <Testimonials />

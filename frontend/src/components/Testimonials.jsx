@@ -17,7 +17,7 @@ const Testimonials = () => {
   return (
     <section
       data-testid="testimonials-section"
-      className="relative py-24 md:py-36 bg-[#F3F1EC]"
+      className="relative py-24 md:py-36 bg-[#0A0A14]"
     >
       <div className="max-w-5xl mx-auto px-6 lg:px-12 text-center">
         <div className="flex items-center justify-center gap-3 mb-5">
@@ -27,7 +27,7 @@ const Testimonials = () => {
           </span>
           <span className="h-px w-10 bg-[#B38B36]" />
         </div>
-        <h2 className="font-serif text-4xl sm:text-5xl text-[#1A1A1A] mb-14">
+        <h2 className="font-serif text-4xl sm:text-5xl text-white mb-14">
           From the hearts of our <em className="italic text-[#B38B36]">seekers.</em>
         </h2>
 
@@ -37,7 +37,7 @@ const Testimonials = () => {
           <p
             data-testid="testimonial-quote"
             key={active.id}
-            className="font-serif italic text-2xl sm:text-3xl leading-relaxed text-[#2A2A2A] max-w-3xl mx-auto mb-12 animate-[fade_0.6s_ease]"
+            className="font-serif italic text-2xl sm:text-3xl leading-relaxed text-gray-200 max-w-3xl mx-auto mb-12 animate-[fade_0.6s_ease]"
           >
             “{active.quote}”
           </p>
@@ -48,8 +48,8 @@ const Testimonials = () => {
               alt={active.name}
               className="w-14 h-14 rounded-full object-cover border-2 border-[#B38B36] mb-3"
             />
-            <div className="font-serif text-lg text-[#1A1A1A]">{active.name}</div>
-            <div className="text-[10px] tracking-[0.3em] uppercase text-[#725D46] mt-1">
+            <div className="font-serif text-lg text-white">{active.name}</div>
+            <div className="text-[10px] tracking-[0.3em] uppercase text-[#B38B36] mt-1">
               Verified Client
             </div>
           </div>
@@ -60,7 +60,7 @@ const Testimonials = () => {
               onClick={() =>
                 setIdx((i) => (i - 1 + TESTIMONIALS.length) % TESTIMONIALS.length)
               }
-              className="w-10 h-10 rounded-full border border-[#E5E1D8] flex items-center justify-center hover:border-[#B38B36] hover:text-[#B38B36] transition-all"
+              className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-[#B38B36] hover:text-[#B38B36] text-white/50 transition-all"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -79,7 +79,7 @@ const Testimonials = () => {
             <button
               data-testid="testimonial-next"
               onClick={() => setIdx((i) => (i + 1) % TESTIMONIALS.length)}
-              className="w-10 h-10 rounded-full border border-[#E5E1D8] flex items-center justify-center hover:border-[#B38B36] hover:text-[#B38B36] transition-all"
+              className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-[#B38B36] hover:text-[#B38B36] text-white/50 transition-all"
             >
               <ChevronRight className="w-4 h-4" />
             </button>

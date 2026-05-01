@@ -19,136 +19,72 @@ const Footer = () => {
     <footer
       id="contact"
       data-testid="site-footer"
-      className="relative bg-[#1A1A1A] text-white overflow-hidden"
+      className="relative bg-[#F3F4F6] text-[#1A1A1A] pt-24 pb-12 overflow-hidden border-t border-black/5"
     >
-      <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
-        style={{
-          backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' /%3E%3C/svg%3E\")",
-        }}
-      />
-
-      {/* Newsletter */}
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-12 py-20 border-b border-white/10">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <span className="h-px w-10 bg-[#E5C06A]" />
-              <span className="text-[11px] tracking-[0.4em] uppercase text-[#E5C06A]">
-                Newsletter
-              </span>
-            </div>
-            <h3 className="font-serif text-3xl sm:text-4xl leading-tight">
-              Your daily <em className="italic text-[#E5C06A]">horoscope,</em>{" "}
-              delivered.
-            </h3>
-            <p className="text-white/60 text-sm mt-3 max-w-md">
-              Horoscope, love scope and tarot pull — every morning in your inbox.
-            </p>
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20 relative z-10">
+        <div className="space-y-6">
+          <div className="font-serif text-4xl tracking-[-0.05em] text-[#1A1A1A]">
+            ZODI<span className="text-[#B38B36]">AC</span>
           </div>
-          <form
-            onSubmit={handleSubscribe}
-            className="flex bg-white/5 border border-white/15 rounded-full p-1.5 backdrop-blur"
-          >
-            <div className="flex items-center pl-4 text-[#E5C06A]">
-              <Mail className="w-4 h-4" />
-            </div>
-            <input
-              data-testid="newsletter-input"
-              type="email"
-              placeholder="your@email.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 bg-transparent px-3 py-3 text-sm placeholder:text-white/40 focus:outline-none"
-            />
-            <button
-              data-testid="newsletter-subscribe"
-              type="submit"
-              className="bg-[#E5C06A] hover:bg-white text-[#1A1A1A] text-xs tracking-[0.2em] uppercase px-6 py-3 rounded-full transition-all"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </div>
-
-      {/* Main */}
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-12 py-20 grid md:grid-cols-5 gap-10">
-        <div className="md:col-span-2">
-          <div className="flex items-center gap-2 mb-5">
-            <Sparkles className="w-5 h-5 text-[#E5C06A]" />
-            <span className="font-serif text-3xl">Soul Karma</span>
-          </div>
-          <p className="text-white/60 text-sm leading-relaxed max-w-sm">
-            A modern sanctuary of Vedic astrology, vastu and numerology — guided
-            by Gitika Sharma with over 15 years of practice.
+          <p className="text-gray-500 text-sm leading-relaxed max-w-xs font-light">
+            Your trusted source for professional astrological services and individual reports. 
+            Guidance for your soul's journey through the stars.
           </p>
-          <div className="flex gap-3 mt-6">
-            {[Instagram, Facebook, Youtube].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                data-testid={`social-${i}`}
-                className="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center hover:border-[#E5C06A] hover:text-[#E5C06A] transition-all"
-              >
-                <Icon className="w-4 h-4" />
-              </a>
-            ))}
+          <div className="space-y-3">
+            <p className="text-[11px] tracking-[0.2em] text-gray-500">8901 Marmora Road, Glasgow, D04 89GR.</p>
+            <p className="text-[11px] tracking-[0.2em] text-[#B38B36] font-bold">+1 800 123 1234</p>
+            <p className="text-[11px] tracking-[0.2em] text-gray-500 underline italic">mail@demosite.com</p>
           </div>
         </div>
 
         <div>
-          <h4 className="text-[10px] tracking-[0.3em] uppercase text-[#E5C06A] mb-5">
-            Services
-          </h4>
-          <ul className="space-y-3 text-sm text-white/70">
-            {["Kundali Analysis", "Kundali Making", "Match Making", "Numerology", "Vastu", "Soul Purpose"].map(
-              (s) => (
-                <li key={s}>
-                  <a href="#services" className="hover:text-[#E5C06A] transition-colors">
-                    {s}
-                  </a>
-                </li>
-              )
-            )}
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="text-[10px] tracking-[0.3em] uppercase text-[#E5C06A] mb-5">
-            Courses
-          </h4>
-          <ul className="space-y-3 text-sm text-white/70">
-            {["Akashic Records", "Bhrigu Nandi Nadi", "Lal Kitab", "Palmistry", "Vastu Shastra"].map((s) => (
-              <li key={s}>
-                <a href="#courses" className="hover:text-[#E5C06A] transition-colors">
-                  {s}
-                </a>
+          <h4 className="font-serif text-xl text-[#1A1A1A] mb-10 uppercase tracking-tight">Services</h4>
+          <ul className="space-y-4">
+            {["Vedic Astrology", "Horoscope Matching", "Vastu Shastra", "Gemstone Therapy", "Numerology"].map((item) => (
+              <li key={item}>
+                <a href="#" className="text-[11px] tracking-[0.2em] uppercase text-gray-500 hover:text-[#B38B36] transition-colors">{item}</a>
               </li>
             ))}
           </ul>
         </div>
 
         <div>
-          <h4 className="text-[10px] tracking-[0.3em] uppercase text-[#E5C06A] mb-5">
-            Contact
-          </h4>
-          <ul className="space-y-3 text-sm text-white/70">
-            <li>hello@soulkarma.in</li>
-            <li>+91 98XXX XXXXX</li>
-            <li>New Delhi · India</li>
-            <li className="pt-2">Mon – Sat · 9 AM to 7 PM</li>
+          <h4 className="text-[#1A1A1A] text-xs tracking-[0.3em] uppercase mb-10 font-bold">Popular Links</h4>
+          <ul className="space-y-4">
+            {["About Us", "Our Gallery", "Horoscopes", "Contact Us", "Privacy Policy"].map((item) => (
+              <li key={item}>
+                <a href="#" className="text-[11px] tracking-[0.2em] uppercase text-gray-500 hover:text-[#B38B36] transition-colors">{item}</a>
+              </li>
+            ))}
           </ul>
+        </div>
+
+        <div>
+          <h4 className="text-[#1A1A1A] text-xs tracking-[0.3em] uppercase mb-10 font-bold">Publications</h4>
+          <div className="space-y-6">
+            <p className="text-gray-500 text-sm leading-relaxed italic opacity-80">
+              "The stars do not compel, they incline." Join our weekly newsletter to get 
+              astrological updates directly to your inbox.
+            </p>
+            <form className="flex border-b border-black/10 pb-2">
+              <input 
+                type="email" 
+                placeholder="Your Email" 
+                className="bg-transparent text-sm w-full focus:outline-none placeholder:text-gray-400"
+              />
+              <button type="submit" className="text-[#B38B36] hover:text-[#1A1A1A] transition-colors">
+                <Sparkles className="w-4 h-4" />
+              </button>
+            </form>
+          </div>
         </div>
       </div>
 
-      <div className="relative border-t border-white/10 py-6 px-6 lg:px-12 max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-white/40">
-        <div>© {new Date().getFullYear()} Soul Karma by Gitika Sharma. All rights reserved.</div>
-        <div className="flex gap-6">
-          <a href="#" className="hover:text-[#E5C06A]">Privacy</a>
-          <a href="#" className="hover:text-[#E5C06A]">Terms</a>
-          <a href="#" className="hover:text-[#E5C06A]">Refund Policy</a>
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-8 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] tracking-[0.2em] text-gray-500 uppercase relative z-10">
+        <p>Copyright © {new Date().getFullYear()}. All rights reserved.</p>
+        <div className="flex gap-8">
+          <a href="#" className="hover:text-[#1A1A1A] transition-colors">Terms</a>
+          <a href="#" className="hover:text-[#1A1A1A] transition-colors">Privacy</a>
         </div>
       </div>
     </footer>

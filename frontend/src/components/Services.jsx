@@ -10,77 +10,88 @@ const Services = () => {
     <section
       id="services"
       data-testid="services-section"
-      className="relative py-24 md:py-36 bg-[#FAFAFA]"
+      className="relative py-24 md:py-36 bg-[#FDFBF7] overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
-          <div>
-            <div className="flex items-center gap-3 mb-5">
-              <span className="h-px w-10 bg-[#B38B36]" />
-              <span className="text-[11px] tracking-[0.4em] uppercase text-[#725D46]">
-                Our Services
-              </span>
+      {/* Immersive Background Elements */}
+      <div className="absolute inset-0 z-0 pointer-events-none select-none">
+        <span className="absolute top-1/4 left-0 font-serif text-[25vw] text-black/[0.01] uppercase -translate-x-1/2">
+          Service
+        </span>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        <div className="flex flex-col md:flex-row items-end justify-between mb-32 gap-8">
+          <div className="max-w-2xl text-left">
+            <div className="flex items-center gap-4 mb-8">
+              <span className="h-px w-12 bg-[#B38B36]" />
+              <span className="text-[10px] tracking-[0.6em] uppercase text-[#B38B36] font-black">Sacred Offerings</span>
             </div>
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tight text-[#1A1A1A] leading-[1.05] max-w-2xl">
-              Consultations crafted for your{" "}
-              <em className="italic text-[#B38B36] font-light">becoming.</em>
+            <h2 className="font-serif text-6xl md:text-8xl text-[#1A1A1A] leading-[0.9] tracking-tighter">
+              The Path to <br />
+              <span className="italic font-light text-[#B38B36]">Self Mastery.</span>
             </h2>
           </div>
-          <p className="text-[#5C5C5C] max-w-md leading-relaxed">
-            Select a service to view available dates and time slots. Every
-            session is a private, one-to-one sitting with Gitika — either over
-            video call or in-person at our Delhi studio.
+          <p className="max-w-xs text-gray-400 text-xs leading-loose font-light italic mb-6">
+            We provide a curated gallery of celestial services designed to align your earthly path with the stars.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {SERVICES.map((s, idx) => (
-            <article
-              key={s.id}
-              data-testid={`service-card-${s.id}`}
-              className="group relative bg-white border border-[#E5E1D8] rounded-2xl overflow-hidden flex flex-col transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(179,139,54,0.35)] hover:border-[#B38B36]/40"
-              style={{ animationDelay: `${idx * 80}ms` }}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 relative z-10">
+          {SERVICES.map((item, i) => (
+            <div 
+              key={i} 
+              className="group flex flex-col bg-white rounded-2xl p-8 lg:p-10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-[#E5E0D8] relative overflow-hidden"
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-[#F3F1EC]">
-                <img
-                  src={s.image}
-                  alt={s.title}
-                  className="w-full h-full object-contain p-8 transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute top-4 right-4 text-[10px] tracking-[0.25em] uppercase bg-white/90 backdrop-blur px-3 py-1.5 rounded-full text-[#725D46] border border-[#E5E1D8]">
-                  {s.duration}
+              {/* Subtle hover gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#FDFBF7] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+              {/* Header: Icon & Duration */}
+              <div className="flex items-start justify-between mb-8 relative z-10">
+                {/* Elegant Icon Container */}
+                <div className="w-20 h-20 rounded-2xl bg-[#FDFBF7] border border-[#E5E0D8] flex items-center justify-center p-4 group-hover:scale-110 group-hover:border-[#B38B36]/30 transition-all duration-500">
+                  <img 
+                    src={item.image} 
+                    alt={item.title} 
+                    className="w-full h-full object-contain drop-shadow-sm opacity-80 group-hover:opacity-100 transition-opacity" 
+                  />
+                </div>
+
+                {/* Clean Duration Badge */}
+                <div className="flex items-center gap-1.5 text-[#B38B36] bg-[#B38B36]/5 px-3 py-1 rounded-full">
+                   <CalendarClock className="w-3.5 h-3.5" />
+                   <span className="text-[10px] tracking-[0.2em] font-bold uppercase">{item.duration}</span>
                 </div>
               </div>
 
-              <div className="p-7 flex-1 flex flex-col">
-                <h3 className="font-serif text-2xl text-[#1A1A1A] mb-3">
-                  {s.title}
-                </h3>
-                <p className="text-sm text-[#5C5C5C] leading-relaxed mb-6 flex-1">
-                  {s.desc}
+              {/* Content */}
+              <div className="flex flex-col flex-grow relative z-10">
+                <h4 className="font-serif text-[#1A1A1A] text-2xl lg:text-3xl mb-4 group-hover:text-[#B38B36] transition-colors duration-500">
+                  {item.title}
+                </h4>
+                
+                <p className="text-gray-500 text-sm leading-relaxed font-light mb-8 flex-grow">
+                  {item.desc}
                 </p>
-
-                <div className="flex items-center justify-between pt-5 border-t border-[#E5E1D8]">
-                  <div>
-                    <div className="text-[10px] tracking-[0.25em] uppercase text-[#725D46]">
-                      Starting from
-                    </div>
-                    <div className="font-serif text-xl text-[#1A1A1A]">
-                      {formatINR(s.price)}
-                    </div>
-                  </div>
-                  <button
-                    data-testid={`book-service-${s.id}`}
-                    onClick={() => setSelected(s)}
-                    className="group/btn inline-flex items-center gap-2 bg-[#1A1A1A] hover:bg-[#B38B36] text-white text-xs tracking-[0.2em] uppercase px-5 py-3 rounded-full transition-all duration-300"
-                  >
-                    <CalendarClock className="w-3.5 h-3.5" />
-                    Book
-                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
-                  </button>
+                
+                {/* Footer: Price & Action */}
+                <div className="flex items-end justify-between pt-6 border-t border-[#E5E0D8] mt-auto">
+                   <div className="flex flex-col">
+                      <span className="text-[9px] tracking-[0.2em] uppercase text-gray-400 font-semibold mb-1">Starting From</span>
+                      <span className="font-serif text-xl text-[#1A1A1A]">{formatINR(item.price)}</span>
+                   </div>
+                   
+                   <button 
+                      onClick={() => setSelected(item)}
+                      className="group/btn flex items-center gap-2 text-[10px] tracking-[0.2em] uppercase font-bold text-[#1A1A1A] hover:text-[#B38B36] transition-colors"
+                   >
+                     Book Session
+                     <span className="w-8 h-8 rounded-full bg-[#FDFBF7] border border-[#E5E0D8] flex items-center justify-center group-hover/btn:bg-[#B38B36] group-hover/btn:border-[#B38B36] transition-colors">
+                       <ArrowUpRight className="w-3.5 h-3.5 text-[#1A1A1A] group-hover/btn:text-white transition-colors" />
+                     </span>
+                   </button>
                 </div>
               </div>
-            </article>
+            </div>
           ))}
         </div>
       </div>
