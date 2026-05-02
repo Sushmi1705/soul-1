@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: soul-frontend
+    name: soul-v2-frontend
     env: static
-    rootDir: frontend
-    buildCommand: yarn install && yarn build
+    rootDir: v2-modern
+    buildCommand: npm install && npm run build
     staticPublishPath: build
     routes:
       - type: rewrite
