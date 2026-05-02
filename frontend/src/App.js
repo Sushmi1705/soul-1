@@ -11,9 +11,11 @@ import About from "@/components/About";
 import StatsBar from "@/components/StatsBar";
 import ZodiacSigns from "@/components/ZodiacSigns";
 import Services from "@/components/Services";
+import Calculators from "@/components/Calculators";
 import Courses from "@/components/Courses";
 import Testimonials from "@/components/Testimonials";
 import Journal from "@/components/Journal";
+import Panchang from "@/components/Panchang";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
 import MobileBottomNav from "@/components/MobileBottomNav";
@@ -40,9 +42,11 @@ const Home = () => {
         <NebulaBackground />
         <HeroAstrology />
         <About />
+        <Panchang />
         <StatsBar />
         <ZodiacSigns />
         <Services />
+        <Calculators />
         <Courses />
         <Testimonials />
         <Journal />
