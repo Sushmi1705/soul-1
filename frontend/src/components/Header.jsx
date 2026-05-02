@@ -16,8 +16,8 @@ const Header = () => {
   return (
     <header className="fixed top-0 inset-x-0 z-50 transition-all duration-300">
       {/* Top Bar */}
-      <div className="bg-[#F9F7F2] border-b border-black/5 py-2 hidden lg:block">
-        <div className="max-w-7xl mx-auto px-12 flex justify-between items-center text-[10px] tracking-[0.2em] uppercase text-gray-500 font-medium">
+      <div className="bg-[#F9F7F2] border-b border-brand-dark/5 py-2 hidden lg:block">
+        <div className="max-w-7xl mx-auto px-12 flex justify-between items-center text-[10px] tracking-[0.2em] uppercase text-stone-500 font-medium">
           <div className="flex items-center gap-6">
             <span>Professional Astrological Services</span>
             <span className="text-[#B38B36]">Call: +1 800 123 1234</span>
@@ -33,7 +33,7 @@ const Header = () => {
       <nav
         className={`transition-all duration-500 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-xl border-b border-black/5 shadow-md py-3"
+            ? "bg-white/95 backdrop-blur-xl border-b border-brand-dark/5 shadow-md py-3"
             : "bg-transparent py-6"
         }`}
       >
@@ -42,7 +42,7 @@ const Header = () => {
             href="#home"
             className="flex items-center gap-2 group"
           >
-            <span className="font-serif text-3xl lg:text-4xl tracking-[-0.05em] text-[#1A1A1A] transition-transform duration-500 group-hover:scale-105">
+            <span className="font-serif text-3xl lg:text-4xl tracking-[-0.05em] text-[#3C2A21] transition-transform duration-500 group-hover:scale-105">
               ZODI<span className="text-[#B38B36]">AC</span>
             </span>
           </a>
@@ -52,7 +52,7 @@ const Header = () => {
               <a
                 key={label}
                 href={`#${label.toLowerCase()}`}
-                className={`text-[11px] tracking-[0.2em] uppercase transition-colors font-medium ${scrolled ? 'text-gray-600 hover:text-[#B38B36]' : 'text-gray-800 hover:text-[#B38B36]'}`}
+                className={`text-[11px] tracking-[0.2em] uppercase transition-colors font-medium ${scrolled ? 'text-stone-600 hover:text-[#B38B36]' : 'text-stone-800 hover:text-[#B38B36]'}`}
               >
                 {label}
               </a>
@@ -62,7 +62,7 @@ const Header = () => {
           <div className="flex items-center gap-6">
             <button
               onClick={() => setIsOpen(true)}
-              className="hidden lg:flex relative items-center gap-2 px-6 py-2.5 rounded-full bg-[#B38B36] text-white hover:bg-[#1A1A1A] transition-all duration-300 group"
+              className="hidden lg:flex relative items-center gap-2 px-6 py-2.5 rounded-full bg-[#B38B36] text-white hover:bg-[#3C2A21] transition-all duration-300 group"
             >
               <ShoppingBag className="w-4 h-4" />
               <span className="text-[10px] tracking-[0.2em] uppercase font-bold">Join Us Today</span>

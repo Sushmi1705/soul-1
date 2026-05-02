@@ -44,10 +44,10 @@ const CartDrawer = () => {
     <Sheet open={isOpen} onOpenChange={handleClose}>
       <SheetContent
         data-testid="cart-drawer"
-        className="w-full sm:max-w-md bg-[#FAFAFA] border-l border-[#E5E1D8] p-0 flex flex-col"
+        className="w-full sm:max-w-md bg-[#FDFBF7] border-l border-[#E5E1D8] p-0 flex flex-col"
       >
         <SheetHeader className="p-6 border-b border-[#E5E1D8]">
-          <SheetTitle className="font-serif text-2xl text-[#1A1A1A] flex items-center gap-3">
+          <SheetTitle className="font-serif text-2xl text-[#3C2A21] flex items-center gap-3">
             <ShoppingBag className="w-5 h-5 text-[#B38B36]" />
             {stage === "cart" && "Your Cart"}
             {stage === "checkout" && "Checkout"}
@@ -67,10 +67,10 @@ const CartDrawer = () => {
                   <div className="w-16 h-16 rounded-full bg-[#F3F1EC] flex items-center justify-center mb-5">
                     <Sparkles className="w-7 h-7 text-[#B38B36]" />
                   </div>
-                  <h3 className="font-serif text-2xl text-[#1A1A1A] mb-2">
+                  <h3 className="font-serif text-2xl text-[#3C2A21] mb-2">
                     Your cart is empty
                   </h3>
-                  <p className="text-sm text-[#5C5C5C] max-w-xs">
+                  <p className="text-sm text-[#725D46] max-w-xs">
                     Begin your journey — explore our courses and add one to your
                     path.
                   </p>
@@ -94,7 +94,7 @@ const CartDrawer = () => {
                         <div className="text-[10px] tracking-[0.2em] uppercase text-[#725D46]">
                           {i.category}
                         </div>
-                        <h4 className="font-serif text-lg text-[#1A1A1A] truncate">
+                        <h4 className="font-serif text-lg text-[#3C2A21] truncate">
                           {i.title}
                         </h4>
                         <div className="flex items-center justify-between mt-2">
@@ -102,7 +102,7 @@ const CartDrawer = () => {
                             <button
                               data-testid={`cart-decrement-${i.id}`}
                               onClick={() => updateQty(i.id, i.qty - 1)}
-                              className="w-7 h-7 flex items-center justify-center text-[#1A1A1A] hover:text-[#B38B36]"
+                              className="w-7 h-7 flex items-center justify-center text-[#3C2A21] hover:text-[#B38B36]"
                             >
                               <Minus className="w-3 h-3" />
                             </button>
@@ -112,12 +112,12 @@ const CartDrawer = () => {
                             <button
                               data-testid={`cart-increment-${i.id}`}
                               onClick={() => updateQty(i.id, i.qty + 1)}
-                              className="w-7 h-7 flex items-center justify-center text-[#1A1A1A] hover:text-[#B38B36]"
+                              className="w-7 h-7 flex items-center justify-center text-[#3C2A21] hover:text-[#B38B36]"
                             >
                               <Plus className="w-3 h-3" />
                             </button>
                           </div>
-                          <div className="font-serif text-[#1A1A1A]">
+                          <div className="font-serif text-[#3C2A21]">
                             {formatINR(i.price * i.qty)}
                           </div>
                         </div>
@@ -125,7 +125,7 @@ const CartDrawer = () => {
                       <button
                         data-testid={`cart-remove-${i.id}`}
                         onClick={() => removeItem(i.id)}
-                        className="self-start text-[#5C5C5C] hover:text-[#B38B36]"
+                        className="self-start text-[#725D46] hover:text-[#B38B36]"
                       >
                         <Trash2 className="w-4 h-4" />
                       </button>
@@ -143,7 +143,7 @@ const CartDrawer = () => {
                   </span>
                   <span
                     data-testid="cart-subtotal"
-                    className="font-serif text-2xl text-[#1A1A1A]"
+                    className="font-serif text-2xl text-[#3C2A21]"
                   >
                     {formatINR(total)}
                   </span>
@@ -151,7 +151,7 @@ const CartDrawer = () => {
                 <button
                   data-testid="checkout-button"
                   onClick={() => setStage("checkout")}
-                  className="w-full bg-[#1A1A1A] hover:bg-[#B38B36] text-white text-xs tracking-[0.25em] uppercase py-4 rounded-full transition-all duration-300"
+                  className="w-full bg-[#3C2A21] hover:bg-[#B38B36] text-white text-xs tracking-[0.25em] uppercase py-4 rounded-full transition-all duration-300"
                 >
                   Proceed to Checkout
                 </button>
@@ -204,7 +204,7 @@ const CartDrawer = () => {
             </div>
 
             <div className="border-t border-[#E5E1D8] pt-5 space-y-2">
-              <div className="flex justify-between text-sm text-[#5C5C5C]">
+              <div className="flex justify-between text-sm text-[#725D46]">
                 <span>Items</span>
                 <span>{items.reduce((s, i) => s + i.qty, 0)}</span>
               </div>
@@ -212,7 +212,7 @@ const CartDrawer = () => {
                 <span className="text-xs tracking-[0.25em] uppercase text-[#725D46]">
                   Total
                 </span>
-                <span className="font-serif text-2xl text-[#1A1A1A]">
+                <span className="font-serif text-2xl text-[#3C2A21]">
                   {formatINR(total)}
                 </span>
               </div>
@@ -222,14 +222,14 @@ const CartDrawer = () => {
               <button
                 data-testid="checkout-back-button"
                 onClick={() => setStage("cart")}
-                className="flex-1 border border-[#E5E1D8] text-[#1A1A1A] hover:border-[#B38B36] hover:text-[#B38B36] text-xs tracking-[0.25em] uppercase py-4 rounded-full transition-all"
+                className="flex-1 border border-[#E5E1D8] text-[#3C2A21] hover:border-[#B38B36] hover:text-[#B38B36] text-xs tracking-[0.25em] uppercase py-4 rounded-full transition-all"
               >
                 Back
               </button>
               <button
                 data-testid="place-order-button"
                 onClick={handlePlace}
-                className="flex-1 bg-[#1A1A1A] hover:bg-[#B38B36] text-white text-xs tracking-[0.25em] uppercase py-4 rounded-full transition-all"
+                className="flex-1 bg-[#3C2A21] hover:bg-[#B38B36] text-white text-xs tracking-[0.25em] uppercase py-4 rounded-full transition-all"
               >
                 Place Order
               </button>
@@ -249,20 +249,20 @@ const CartDrawer = () => {
             <div className="text-[11px] tracking-[0.4em] uppercase text-[#725D46] mb-3">
               Order Placed
             </div>
-            <h3 className="font-serif text-3xl text-[#1A1A1A] mb-4">
+            <h3 className="font-serif text-3xl text-[#3C2A21] mb-4">
               Thank you,{" "}
               <em className="italic text-[#B38B36]">
                 {form.name.split(" ")[0]}
               </em>
             </h3>
-            <p className="text-sm text-[#5C5C5C] max-w-xs mb-8">
+            <p className="text-sm text-[#725D46] max-w-xs mb-8">
               A confirmation and your access details have been sent to{" "}
               <span className="text-[#B38B36]">{form.email}</span>.
             </p>
             <button
               data-testid="order-continue-button"
               onClick={() => handleClose(false)}
-              className="bg-[#1A1A1A] hover:bg-[#B38B36] text-white text-xs tracking-[0.25em] uppercase px-8 py-3.5 rounded-full transition-all"
+              className="bg-[#3C2A21] hover:bg-[#B38B36] text-white text-xs tracking-[0.25em] uppercase px-8 py-3.5 rounded-full transition-all"
             >
               Continue Browsing
             </button>

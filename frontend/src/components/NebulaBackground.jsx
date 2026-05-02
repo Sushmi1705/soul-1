@@ -2,7 +2,7 @@ import React from 'react';
 
 const NebulaBackground = () => {
   return (
-    <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-[#05050A]">
+    <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-[#1E140F]">
       {/* Primary Nebula */}
       <div 
         className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full opacity-[0.07] blur-[120px]"
@@ -12,7 +12,7 @@ const NebulaBackground = () => {
       {/* Secondary Nebula */}
       <div 
         className="absolute bottom-[-10%] right-[-10%] w-[70%] h-[70%] rounded-full opacity-[0.05] blur-[150px]"
-        style={{ background: 'radial-gradient(circle, #4C1D95 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, #B38B36 0%, transparent 70%)' }}
       />
 
       {/* Mid-screen Accent */}

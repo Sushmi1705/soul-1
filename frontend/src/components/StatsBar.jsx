@@ -24,7 +24,7 @@ const StatsBar = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           {stats.map((stat, i) => (
             <div key={i} className="text-center">
-              <div className="font-serif text-4xl md:text-5xl text-[#1A1A1A] mb-2 tracking-tight">
+              <div className="font-serif text-4xl md:text-5xl text-[#3C2A21] mb-2 tracking-tight">
                 {stat.value}
               </div>
               <div className="text-[10px] tracking-[0.3em] uppercase text-[#B38B36] font-bold">

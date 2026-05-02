@@ -26,7 +26,7 @@ const HeroAstrology = () => {
         <div className="absolute inset-0 z-0 opacity-30">
           <iframe
             className="absolute top-1/2 left-1/2 w-[110vw] h-[62vw] min-h-[110vh] min-w-[195vh] -translate-x-1/2 -translate-y-1/2 scale-110 grayscale brightness-150"
-            src="https://www.youtube.com/embed/El12V5eXVsA?autoplay=1&mute=1&loop=1&playlist=El12V5eXVsA&controls=0&showinfo=0&autohide=1&modestbranding=1&rel=0&hd=1"
+            src="https://www.youtube.com/embed/ZXAoEal9pPQ?autoplay=1&mute=1&loop=1&playlist=ZXAoEal9pPQ&controls=0&showinfo=0&autohide=1&modestbranding=1&rel=0&hd=1"
             frameBorder="0"
             allow="autoplay; encrypted-media"
           ></iframe>
@@ -34,7 +34,7 @@ const HeroAstrology = () => {
 
         {/* Massive Decorative Typography (Background Layer) */}
         <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden select-none pointer-events-none">
-          <span className="font-serif text-[40vw] text-black/[0.02] leading-none tracking-tighter uppercase translate-y-20">
+          <span className="font-serif text-[40vw] text-brand-dark/[0.02] leading-none tracking-tighter uppercase translate-y-20">
             Oracle
           </span>
         </div>
@@ -47,25 +47,25 @@ const HeroAstrology = () => {
               <span className="text-[10px] tracking-[0.6em] uppercase text-[#B38B36] font-black">Celestial Wisdom</span>
             </div>
 
-            <h1 className="font-serif text-[#1A1A1A] text-7xl md:text-9xl lg:text-[10rem] leading-[0.85] tracking-tighter mb-12 animate-reveal opacity-0" style={{ animationDelay: '0.4s' }}>
+            <h1 className="font-serif text-[#3C2A21] text-7xl md:text-9xl lg:text-[10rem] leading-[0.85] tracking-tighter mb-12 animate-reveal opacity-0" style={{ animationDelay: '0.4s' }}>
               Divine <br />
               <span className="italic font-light text-[#B38B36] ml-[10%]">Guidance.</span>
             </h1>
 
             <div className="max-w-md ml-[5%] space-y-8 animate-reveal opacity-0" style={{ animationDelay: '0.6s' }}>
-              <p className="text-lg text-gray-500 leading-relaxed font-light">
+              <p className="text-lg text-stone-500 leading-relaxed font-light">
                 We decode the cosmic blueprint of your soul. A high-concept journey 
                 through ancient Vedic science and modern spiritual alchemy.
               </p>
               <div className="flex items-center gap-8">
-                <button className="px-12 py-5 bg-[#1A1A1A] text-white text-[10px] tracking-[0.4em] uppercase font-bold hover:bg-[#B38B36] transition-all duration-700 shadow-2xl">
+                <button className="px-12 py-5 bg-[#3C2A21] text-white text-[10px] tracking-[0.4em] uppercase font-bold hover:bg-[#B38B36] transition-all duration-700 shadow-2xl">
                   Explore The Oracle
                 </button>
                 <div className="flex items-center gap-3 group cursor-pointer">
-                  <div className="w-12 h-12 rounded-full border border-black/5 flex items-center justify-center group-hover:border-[#B38B36] transition-all">
+                  <div className="w-12 h-12 rounded-full border border-brand-dark/5 flex items-center justify-center group-hover:border-[#B38B36] transition-all">
                     <div className="w-2 h-2 rounded-full bg-[#B38B36] animate-pulse" />
                   </div>
-                  <span className="text-[9px] tracking-[0.3em] uppercase font-bold text-gray-400 group-hover:text-[#1A1A1A] transition-colors">Play Intro</span>
+                  <span className="text-[9px] tracking-[0.3em] uppercase font-bold text-stone-400 group-hover:text-[#3C2A21] transition-colors">Play Intro</span>
                 </div>
               </div>
             </div>
@@ -88,7 +88,7 @@ const HeroAstrology = () => {
                   ))}
                </svg>
                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-64 h-64 rounded-full bg-white shadow-[-20px_20px_60px_rgba(0,0,0,0.05)] border border-black/[0.02] flex items-center justify-center p-12">
+                  <div className="w-64 h-64 rounded-full bg-white shadow-[-20px_20px_60px_rgba(60,42,33,0.05)] border border-brand-dark/[0.02] flex items-center justify-center p-12">
                      <img 
                       src="https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5?auto=format&fit=crop&q=80&w=400" 
                       alt="Oracle" 

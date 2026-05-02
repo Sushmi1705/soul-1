@@ -34,7 +34,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-[#05050A] text-white min-h-screen font-[Outfit,sans-serif] antialiased pb-24 lg:pb-0">
+    <div className="bg-[#FDFBF7] text-[#3C2A21] min-h-screen font-[Outfit,sans-serif] antialiased pb-24 lg:pb-0">
       <Header />
       <main>
         <NebulaBackground />
@@ -66,8 +66,8 @@ function App() {
         position="bottom-right"
         toastOptions={{
           style: {
-            background: "#1A1A1A",
-            color: "#FAFAFA",
+            background: "#FDFBF7",
+            color: "#3C2A21",
             border: "1px solid #B38B36",
             fontFamily: "Outfit, sans-serif",
           },

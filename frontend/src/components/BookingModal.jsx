@@ -45,7 +45,7 @@ const BookingModal = ({ service, open, onClose }) => {
     <Dialog open={open} onOpenChange={(v) => !v && onClose()}>
       <DialogContent
         data-testid="booking-modal"
-        className="max-w-5xl p-0 bg-[#FAFAFA] border border-[#E5E1D8] overflow-hidden rounded-none sm:rounded-2xl w-screen h-[100dvh] sm:h-auto sm:w-full max-h-[100dvh] sm:max-h-[90vh]"
+        className="max-w-5xl p-0 bg-[#FDFBF7] border border-[#E5E1D8] overflow-hidden rounded-none sm:rounded-2xl w-screen h-[100dvh] sm:h-auto sm:w-full max-h-[100dvh] sm:max-h-[90vh]"
       >
         <DialogTitle className="sr-only">Book {service.title}</DialogTitle>
         <DialogDescription className="sr-only">
@@ -63,11 +63,11 @@ const BookingModal = ({ service, open, onClose }) => {
             <div className="text-[11px] tracking-[0.4em] uppercase text-[#725D46] mb-3">
               Appointment Confirmed
             </div>
-            <h3 className="font-serif text-3xl md:text-4xl text-[#1A1A1A] mb-5">
+            <h3 className="font-serif text-3xl md:text-4xl text-[#3C2A21] mb-5">
               The stars have aligned,{" "}
               <em className="italic text-[#B38B36]">{form.name.split(" ")[0]}.</em>
             </h3>
-            <p className="text-[#5C5C5C] max-w-md mb-8">
+            <p className="text-[#725D46] max-w-md mb-8">
               Your session for <strong>{service.title}</strong> is booked on{" "}
               <strong>{date.toDateString()}</strong> at <strong>{slot}</strong>.
               A confirmation has been sent to{" "}
@@ -76,7 +76,7 @@ const BookingModal = ({ service, open, onClose }) => {
             <button
               data-testid="booking-close-confirmation"
               onClick={onClose}
-              className="bg-[#1A1A1A] hover:bg-[#B38B36] text-white text-xs tracking-[0.2em] uppercase px-8 py-3.5 rounded-full transition-all"
+              className="bg-[#3C2A21] hover:bg-[#B38B36] text-white text-xs tracking-[0.2em] uppercase px-8 py-3.5 rounded-full transition-all"
             >
               Close
             </button>
@@ -84,7 +84,7 @@ const BookingModal = ({ service, open, onClose }) => {
         ) : (
           <div className="grid md:grid-cols-[1fr_1.1fr] h-full md:max-h-[85vh] overflow-y-auto">
             {/* LEFT - Service summary */}
-            <aside className="bg-[#1A1A1A] text-white p-6 md:p-10 flex flex-col justify-between md:sticky md:top-0">
+            <aside className="bg-[#3C2A21] text-white p-6 md:p-10 flex flex-col justify-between md:sticky md:top-0">
               <div>
                 <div className="text-[10px] tracking-[0.4em] uppercase text-[#E5C06A] mb-4">
                   Booking
@@ -136,7 +136,7 @@ const BookingModal = ({ service, open, onClose }) => {
                   <span className="w-6 h-6 rounded-full bg-[#B38B36] text-white text-xs font-medium flex items-center justify-center">
                     1
                   </span>
-                  <h4 className="font-serif text-xl text-[#1A1A1A]">
+                  <h4 className="font-serif text-xl text-[#3C2A21]">
                     Pick a date
                   </h4>
                 </div>
@@ -160,12 +160,12 @@ const BookingModal = ({ service, open, onClose }) => {
                   <span className="w-6 h-6 rounded-full bg-[#B38B36] text-white text-xs font-medium flex items-center justify-center">
                     2
                   </span>
-                  <h4 className="font-serif text-xl text-[#1A1A1A]">
+                  <h4 className="font-serif text-xl text-[#3C2A21]">
                     Available time slots
                   </h4>
                 </div>
                 {!date ? (
-                  <p className="text-sm text-[#5C5C5C] italic">
+                  <p className="text-sm text-[#725D46] italic">
                     Please choose a date to see available slots.
                   </p>
                 ) : (
@@ -183,7 +183,7 @@ const BookingModal = ({ service, open, onClose }) => {
                             !available
                               ? "border-[#E5E1D8] text-[#B8B2A3] line-through cursor-not-allowed bg-[#F3F1EC]"
                               : isSelected
-                              ? "bg-[#1A1A1A] text-white border-[#1A1A1A]"
+                              ? "bg-[#3C2A21] text-white border-[#3C2A21]"
                               : "border-[#E5E1D8] text-[#2A2A2A] hover:border-[#B38B36] hover:text-[#B38B36]"
                           }`}
                         >
@@ -202,7 +202,7 @@ const BookingModal = ({ service, open, onClose }) => {
                   <span className="w-6 h-6 rounded-full bg-[#B38B36] text-white text-xs font-medium flex items-center justify-center">
                     3
                   </span>
-                  <h4 className="font-serif text-xl text-[#1A1A1A]">
+                  <h4 className="font-serif text-xl text-[#3C2A21]">
                     Your details
                   </h4>
                 </div>
@@ -245,7 +245,7 @@ const BookingModal = ({ service, open, onClose }) => {
               <button
                 data-testid="confirm-booking-button"
                 onClick={handleConfirm}
-                className="w-full bg-[#1A1A1A] hover:bg-[#B38B36] text-white text-xs tracking-[0.25em] uppercase py-4 rounded-full transition-all duration-300 font-medium"
+                className="w-full bg-[#3C2A21] hover:bg-[#B38B36] text-white text-xs tracking-[0.25em] uppercase py-4 rounded-full transition-all duration-300 font-medium"
               >
                 Confirm Appointment · {formatINR(service.price)}
               </button>

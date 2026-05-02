@@ -16,11 +16,11 @@ code {
 @layer base {
   :root {
     --background: 40 25% 98%;
-    --foreground: 0 0% 10%;
+    --foreground: 25 40% 15%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 25 40% 15%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 25 40% 15%;
     --primary: 36 54% 46%;
     --primary-foreground: 0 0% 100%;
     --secondary: 40 18% 93%;
@@ -37,24 +37,24 @@ code {
     --radius: 0.75rem;
   }
   .dark {
-    --background: 0 0% 10%;
+    --background: 25 30% 8%;
     --foreground: 40 25% 95%;
-    --card: 0 0% 14%;
+    --card: 25 30% 12%;
     --card-foreground: 40 25% 95%;
-    --popover: 0 0% 14%;
+    --popover: 25 30% 12%;
     --popover-foreground: 40 25% 95%;
     --primary: 36 54% 60%;
-    --primary-foreground: 0 0% 10%;
-    --secondary: 0 0% 18%;
+    --primary-foreground: 25 30% 8%;
+    --secondary: 25 30% 15%;
     --secondary-foreground: 40 25% 95%;
-    --muted: 0 0% 18%;
+    --muted: 25 30% 15%;
     --muted-foreground: 30 6% 65%;
     --accent: 36 54% 60%;
-    --accent-foreground: 0 0% 10%;
+    --accent-foreground: 25 30% 8%;
     --destructive: 0 60% 40%;
     --destructive-foreground: 40 25% 95%;
-    --border: 0 0% 22%;
-    --input: 0 0% 22%;
+    --border: 25 30% 18%;
+    --input: 25 30% 18%;
     --ring: 36 54% 60%;
   }
 }

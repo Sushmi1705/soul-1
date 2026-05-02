@@ -20,7 +20,7 @@ const ZodiacSigns = () => {
     <section className="py-36 bg-white overflow-hidden relative">
       {/* Background Decorative Text */}
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none select-none">
-        <span className="font-serif text-[30vw] text-black/[0.01] leading-none uppercase -rotate-12">
+        <span className="font-serif text-[30vw] text-brand-dark/[0.01] leading-none uppercase -rotate-12">
           Celestial
         </span>
       </div>
@@ -32,12 +32,12 @@ const ZodiacSigns = () => {
                 <span className="h-px w-12 bg-[#B38B36]" />
                 <span className="text-[10px] tracking-[0.6em] uppercase text-[#B38B36] font-black">Sacred Symbols</span>
               </div>
-              <h2 className="font-serif text-5xl md:text-7xl text-[#1A1A1A] leading-tight tracking-tighter">
+              <h2 className="font-serif text-5xl md:text-7xl text-[#3C2A21] leading-tight tracking-tighter">
                 Explore Your <br />
                 <span className="italic font-light text-[#B38B36]">Zodiac Soul.</span>
               </h2>
            </div>
-           <p className="max-w-xs text-gray-400 text-xs leading-loose font-light italic mb-4">
+           <p className="max-w-xs text-stone-400 text-xs leading-loose font-light italic mb-4">
              Each symbol is a gateway to a unique cosmic frequency. Click to decode your celestial signature.
            </p>
         </div>
@@ -58,14 +58,14 @@ const ZodiacSigns = () => {
                 {/* Glow */}
                 <div className="absolute inset-0 rounded-full bg-[#B38B36]/10 blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 scale-150" />
                 
-                <div className="w-24 h-24 rounded-full border border-black/[0.03] flex items-center justify-center text-5xl text-[#B38B36] transition-all duration-700 group-hover:border-[#B38B36]/40 bg-white group-hover:-rotate-12 shadow-[0_5px_15px_rgba(0,0,0,0.02)] group-hover:shadow-[0_30px_60px_rgba(179,139,54,0.15)] relative z-10 overflow-hidden">
+                <div className="w-24 h-24 rounded-full border border-brand-dark/[0.03] flex items-center justify-center text-5xl text-[#B38B36] transition-all duration-700 group-hover:border-[#B38B36]/40 bg-white group-hover:-rotate-12 shadow-[0_5px_15px_rgba(60,42,33,0.02)] group-hover:shadow-[0_30px_60px_rgba(179,139,54,0.15)] relative z-10 overflow-hidden">
                    {/* Background Symbol Overlay */}
                    <span className="absolute inset-0 flex items-center justify-center text-8xl text-[#B38B36]/[0.02] pointer-events-none">{sign.icon}</span>
                    <span className="relative z-10 group-hover:scale-125 transition-transform duration-700 ease-out">{sign.icon}</span>
                 </div>
               </div>
               <div className="mt-8 text-center">
-                <span className="text-[10px] tracking-[0.4em] uppercase text-gray-400 group-hover:text-[#1A1A1A] transition-colors font-black block mb-2">
+                <span className="text-[10px] tracking-[0.4em] uppercase text-stone-400 group-hover:text-[#3C2A21] transition-colors font-black block mb-2">
                   {sign.name}
                 </span>
                 <div className="w-0 h-[1px] bg-[#B38B36] mx-auto group-hover:w-full transition-all duration-700" />

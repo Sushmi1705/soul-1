@@ -6,7 +6,7 @@ const Journal = () => {
     <section
       id="journal"
       data-testid="journal-section"
-      className="relative py-24 md:py-36 bg-[#FAFAFA]"
+      className="relative py-24 md:py-36 bg-[#FDFBF7]"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
@@ -17,14 +17,14 @@ const Journal = () => {
                 Journal
               </span>
             </div>
-            <h2 className="font-serif text-4xl sm:text-5xl tracking-tight text-[#1A1A1A] leading-[1.05]">
+            <h2 className="font-serif text-4xl sm:text-5xl tracking-tight text-[#3C2A21] leading-[1.05]">
               Notes from the <em className="italic text-[#B38B36] font-light">cosmos.</em>
             </h2>
           </div>
           <a
             href="#"
             data-testid="journal-view-all"
-            className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-[#1A1A1A] hover:text-[#B38B36] transition-colors"
+            className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-[#3C2A21] hover:text-[#B38B36] transition-colors"
           >
             View all writings
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -51,10 +51,10 @@ const Journal = () => {
                   <span className="w-1 h-1 rounded-full bg-[#B38B36]" />
                   <span>{b.date}</span>
                 </div>
-                <h3 className="font-serif text-xl text-[#1A1A1A] mb-3 leading-snug group-hover:text-[#B38B36] transition-colors">
+                <h3 className="font-serif text-xl text-[#3C2A21] mb-3 leading-snug group-hover:text-[#B38B36] transition-colors">
                   {b.title}
                 </h3>
-                <p className="text-sm text-[#5C5C5C] leading-relaxed line-clamp-3">
+                <p className="text-sm text-[#725D46] leading-relaxed line-clamp-3">
                   {b.excerpt}
                 </p>
                 <div className="mt-5 inline-flex items-center gap-2 text-[11px] tracking-[0.25em] uppercase text-[#B38B36]">
